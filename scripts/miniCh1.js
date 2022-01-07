@@ -7,9 +7,8 @@ let sayHelloUrl = "";
 
 //add Event Listener
 ch1SubmitBtn.addEventListener('click', function(e){
-    functionName = ch1Name.value;
-    sayHelloUrl = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh1/" + functionName;
-    urlMethod(sayHelloUrl);
+    
+    allLetter(ch1Name);
 })
 
 function urlMethod(url)
@@ -21,3 +20,17 @@ function urlMethod(url)
     })
 }
 
+function allLetter(ch1Name)
+{ 
+    var letters = /^[A-Za-z]+$/;
+    if(ch1Name.value.match(letters))
+    {
+        functionName = ch1Name.value;
+        sayHelloUrl = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh1/" + functionName;
+        urlMethod(sayHelloUrl);
+        
+    }else{
+        ch1Return.textContent = "Enter a valid name";
+        
+    }
+}

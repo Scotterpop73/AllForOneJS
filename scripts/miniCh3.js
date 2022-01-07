@@ -9,10 +9,9 @@ let timeWokeUp = "";
 
 //add Event Listener
 ch3SubmitBtn.addEventListener('click', function(e){
-    ch3FunctionName = ch3Name.value;
+    
     functionTime = ch3Time.value
-    timeWokeUp = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh3/" + ch3FunctionName + "/" + functionTime;
-    urlMethod(timeWokeUp);
+    allLetter(ch3Name);
 })
 
 function urlMethod(url)
@@ -22,4 +21,19 @@ function urlMethod(url)
         ch3Return.textContent = data;
         console.log(data);
     })
+}
+
+function allLetter(ch3Name)
+{ 
+    var letters = /^[A-Za-z]+$/;
+    if(ch3Name.value.match(letters))
+    {
+        ch3FunctionName = ch3Name.value;
+        timeWokeUp = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh3/" + ch3FunctionName + "/" + functionTime;
+        urlMethod(timeWokeUp);
+        
+    }else{
+        ch3Return.textContent = "Enter a valid name";
+        
+    }
 }
