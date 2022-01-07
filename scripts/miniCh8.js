@@ -53,11 +53,11 @@ function urlMethod(url)
             ch8SlackReturn.textContent = "";
             ch8HobbiesReturn.textContent = "";
         }else{
-            ch8FNameReturn.textContent = students.firstName;
-            ch8LNameReturn.textContent = students.lastName;
-            ch8EmailReturn.textContent = students.email;
-            ch8SlackReturn.textContent = students.slackName;
-            ch8HobbiesReturn.textContent = students.hobbies;
+            ch8FNameReturn.textContent = "First Name: " +students.firstName;
+            ch8LNameReturn.textContent = "Last Name: " +students.lastName;
+            ch8EmailReturn.textContent = "Email: " +students.email;
+            ch8SlackReturn.textContent = "Slack: " +students.slackName;
+            ch8HobbiesReturn.textContent = "Hobbies: " +students.hobbies;
         }
         console.log(students);
     })
