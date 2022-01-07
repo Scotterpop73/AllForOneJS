@@ -10,8 +10,16 @@ let timeWokeUp = "";
 //add Event Listener
 ch3SubmitBtn.addEventListener('click', function(e){
     
-    functionTime = ch3Time.value
-    allLetter(ch3Name);
+    var numbers = /^[0-9:]+$/;
+    if(ch3Time.value.match(numbers))
+    {
+        functionTime = ch3Time.value;
+        allLetter(ch3Name);
+        
+    }else{
+        ch3Return.textContent = "Enter a valid time";
+        
+    }
 })
 
 function urlMethod(url)
