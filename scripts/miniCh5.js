@@ -13,28 +13,24 @@ let ch5SubmitBtn = document.getElementById("ch5SubmitBtn");
 let ch5Return = document.getElementById("ch5Return");
 let madLibModel;
 let madLibUrl = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh5";
-
-
-
+let allStrings = "";
 
 
 //add Event Listener
 ch5SubmitBtn.addEventListener('click', function(e){
     
-    madLibModel = {
-        adjPlace:"" + ch5Adj1.value,
-        adjFamily:"" + ch5Adj2.value,
-        noun1:"" + ch5Noun1.value,
-        plnoun:"" + ch5PluralNoun.value,
-        verbING:"" + ch5VerbING.value,
-        nounPoison:"" + ch5Noun2.value,
-        plant:"" + ch5Plant.value,
-        body:"" + ch5BodyPart.value,
-        place:"" + ch5Place.value,
-        food:"" + ch5Restaurant.value
-    }
+   
 
-    modelMethod(madLibUrl, madLibModel);
+    if(ch5Noun1.value == "" || ch5Adj2.value == "" || ch5Plant.value == "" || ch5Noun2.value == "" || ch5BodyPart.value == "" || ch5PluralNoun.value == "" || 
+        ch5Place.value == "" || ch5VerbING.value == "" || ch5Restaurant.value == "" || ch5Adj1.value == "") {
+        ch5Return.textContent = "Make sure to have something entered in every field"
+    }else{
+        allStrings = ch5Adj1.value.concat(ch5Noun1.value, ch5Adj2.value, ch5Plant.value, ch5Noun2.value, ch5BodyPart.value, ch5PluralNoun.value, 
+            ch5Place.value, ch5VerbING.value, ch5Restaurant.value);
+
+        allLetter(allStrings);
+    }
+    
 })
 
 function modelMethod(url, model)
@@ -50,4 +46,31 @@ function modelMethod(url, model)
         ch5Return.textContent = data;
         console.log(data)
     });
+}
+
+function allLetter(allStrings)
+{ 
+    var letters = /^[A-Za-z]+$/;
+    
+    if(allStrings.match(letters))
+    {
+        madLibModel = {
+            adjPlace:"" + ch5Adj1.value,
+            adjFamily:"" + ch5Adj2.value,
+            noun1:"" + ch5Noun1.value,
+            plnoun:"" + ch5PluralNoun.value,
+            verbING:"" + ch5VerbING.value,
+            nounPoison:"" + ch5Noun2.value,
+            plant:"" + ch5Plant.value,
+            body:"" + ch5BodyPart.value,
+            place:"" + ch5Place.value,
+            food:"" + ch5Restaurant.value
+        }
+
+        modelMethod(madLibUrl, madLibModel);
+
+    }else{
+        ch5Return.textContent = "Enter a valid word";
+        
+    }
 }
