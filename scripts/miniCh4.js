@@ -11,9 +11,18 @@ let greaterThan = "";
 ch4SubmitBtn.addEventListener('click', function(e){
     ch4FunctionNum1 = ch4Num1.value;
     ch4FunctionNum2 = ch4Num2.value;
-    greaterThan = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh4/" + ch4FunctionNum1 + "/" + ch4FunctionNum2;
-    urlMethod(greaterThan);
 
+    if(ch4FunctionNum1 > 2147483647 || ch4FunctionNum1 < -2147483647 ){
+        ch4Return.textContent = "The first number you entered exceeded the range";
+        if (ch4FunctionNum2 > 2147483647 || ch4FunctionNum2 < -2147483647) {
+            ch4Return.textContent = "Both numbers exceeded the range";
+        }
+    }else if(ch4FunctionNum2 > 2147483647 || ch4FunctionNum2 < -2147483647){
+        ch4Return.textContent = "The second number you entered exceeded the range";
+    }else{
+        greaterThan = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh4/" + ch4FunctionNum1 + "/" + ch4FunctionNum2;
+    urlMethod(greaterThan);
+    }
 })
 
 function urlMethod(url)

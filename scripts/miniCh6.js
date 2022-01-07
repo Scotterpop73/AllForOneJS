@@ -8,8 +8,13 @@ let oddOrEven = "";
 //add Event Listener
 ch6SubmitBtn.addEventListener('click', function(e){
     ch6FunctionNum = ch6Num.value;
-    oddOrEven = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh6/" + ch6FunctionNum;
-    urlMethod(oddOrEven);
+
+    if(ch6FunctionNum > 2147483647 || ch6FunctionNum < -2147483647 ){
+        ch6Return.textContent = "The number you entered exceeded the range";
+    }else{
+        oddOrEven = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh6/" + ch6FunctionNum;
+        urlMethod(oddOrEven);
+    }
 })
 
 function urlMethod(url)

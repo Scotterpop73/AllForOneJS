@@ -9,9 +9,15 @@ let reverseIt = "";
 //add Event Listener
 ch7SubmitBtn.addEventListener('click', function(e){
     ch7FunctionNum = ch7Num.value;
-    ch7OGNum.textContent = ch7Num.value;
-    reverseIt = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh7/" + ch7FunctionNum;
-    urlMethod(reverseIt);
+
+    if(ch7FunctionNum > 2147483647 || ch7FunctionNum < -2147483647 ){
+        ch7ReversedNum.textContent = "";
+        ch7OGNum.textContent = "The number you entered exceeded the range";
+    }else{
+        ch7OGNum.textContent = ch7Num.value;
+        reverseIt = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh7/" + ch7FunctionNum;
+        urlMethod(reverseIt);
+    }
 })
 
 function urlMethod(url)

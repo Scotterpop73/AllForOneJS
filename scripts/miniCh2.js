@@ -13,12 +13,12 @@ ch2SubmitBtn.addEventListener('click', function(e){
     functionNum2 = ch2Num2.value;
 
     if(functionNum1 > 2147483647 || functionNum1 < -2147483647){
-        ch2Return.textContent = "The first number you entered exceed the range";
+        ch2Return.textContent = "The first number you entered exceeded the range";
         if (functionNum2 > 2147483647 || functionNum2 < -2147483647) {
             ch2Return.textContent = "Both nunbers exceeded the range";
         }
     }else if (functionNum2 > 2147483647 || functionNum2 < -2147483647) {
-        ch2Return.textContent = "The second number you entered exceed the range";
+        ch2Return.textContent = "The second number you entered exceeded the range";
     }else{
         addTwoNumbers = "https://scottsallforone.azurewebsites.net/AllForOne/miniCh2/" + functionNum1 + "/" + functionNum2; 
     urlMethod(addTwoNumbers);
