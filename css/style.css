@@ -1,0 +1,141 @@
+.bgImage{
+    background-image: url("../images/snowflake.jpg");
+    background-size: cover;
+    background-position: 90%;
+    height: 100vh;
+    display: relative;
+}
+
+.navbarFormat{
+    
+    background-color: #B3E1EE;
+}
+.miniChallengesFont{
+    color: #E6EFF8;
+    font-size: 90px;
+}
+
+.miniChBtnColor{
+    background-color: #4D4D52;
+    color: #E6EFF8;
+    margin: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: larger;
+}
+
+.bgMiniCh1{
+    background-image: url("../images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: relative;
+}
+
+.miniCh1Font{
+    color: #16180C;
+    font-size: 80px;
+}
+
+.miniCh7Font{
+    color: #E6EFF8;
+    font-size: 80px;
+}
+
+.submitBtnColor{
+    background-color: #4D4D52;
+    color: #E6EFF8;
+    margin: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navbarFont{
+    font-size: larger;
+}
+
+.bgMiniCh2{
+    background-image: url("../images/blizzard.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.marginAnswer{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.bgMiniCh3{
+    background-image: url("../images/cabins.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.bgMiniCh4{
+    background-image: url("../images/mountains2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.bgMiniCh5{
+    background-image: url("../images/smowboard.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.bgMiniCh6{
+    background-image: url("../images/redbird.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: relative;
+}
+
+.bgMiniCh7{
+    background-image: url("../images/miniCh7Snow.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.bgMiniCh8{
+    background-image: url("../images/mountains3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: relative;
+}
+
+.bgMiniCh9{
+    background-image: url("../images/yosemite.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: relative;
+}
+
+.miniCh8Font{
+    font-size: 50px;
+    color: #16180C;
+}
+
+.miniCh5Font{
+    color: #16180C;
+    font-size: 40px;
+}
+
+.miniCh9Font{
+    font-size: 50px;
+    color: #E6EFF8;
+}
