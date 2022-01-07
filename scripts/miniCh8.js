@@ -15,30 +15,37 @@ let studentDirectoryLastNameUrl = "";
 let studentDirectoryEmailUrl = "";
 let studentDirectorySlackUrl = "";
 let students = [];
+let student = document.getElementById("student");
 
 //add Event Listeners
 ch8FNameBtn.addEventListener('click', function(e){
-    ch9FunctionName = ch8StudentSearch.value;
-    studentDirectoryFirstNameUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByFirstName/" + ch9FunctionName;
+    ch8FunctionName = ch8StudentSearch.value;
+    studentDirectoryFirstNameUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByFirstName/" + ch8FunctionName;
     urlMethod(studentDirectoryFirstNameUrl);
 })
 
 ch8LNameBtn.addEventListener('click', function(e){
-    ch9FunctionName = ch8StudentSearch.value;
-    studentDirectoryLastNameUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByLastName/" + ch9FunctionName;
+    ch8FunctionName = ch8StudentSearch.value;
+    studentDirectoryLastNameUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByLastName/" + ch8FunctionName;
     urlMethod(studentDirectoryLastNameUrl);
 })
 
 ch8SlackBtn.addEventListener('click', function(e){
-    ch9FunctionName = ch8StudentSearch.value;
-    studentDirectorySlackUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getBySlack/" + ch9FunctionName;
+    ch8FunctionName = ch8StudentSearch.value;
+    studentDirectorySlackUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getBySlack/" + ch8FunctionName;
     urlMethod(studentDirectorySlackUrl);
 })
 
 ch8EmailBtn.addEventListener('click', function(e){
-    ch9FunctionName = ch8StudentSearch.value;
-    studentDirectoryEmailUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByEmail/" + ch9FunctionName;
+    ch8FunctionName = ch8StudentSearch.value;
+    studentDirectoryEmailUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByEmail/" + ch8FunctionName;
     urlMethod(studentDirectoryEmailUrl);
+})
+
+student.addEventListener('change', function(e){
+    ch8FunctionName = student.value;
+    studentDirectoryFirstNameUrl = "https://scottsallforone.azurewebsites.net/AllForOne/getByFirstName/" + ch8FunctionName;
+    urlMethod(studentDirectoryFirstNameUrl);
 })
 
 function urlMethod(url)
